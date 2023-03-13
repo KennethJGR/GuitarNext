@@ -1,10 +1,10 @@
-import React from "react";
+import Link from "next/link";
 
 const Us = () => {
     return (
         <div>
             us
-            <a href="/">Home</a>
+            <Link href="/"> Home </Link>
         </div>
     );
 };
