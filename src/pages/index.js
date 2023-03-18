@@ -4,7 +4,7 @@ import Layout from "@/components/layout";
 export default function Home() {
   return (
     <>
-      <Layout>
+      <Layout description="This is the home page">
         <h1>Home</h1>
 
         <Link href="/us">us</Link>

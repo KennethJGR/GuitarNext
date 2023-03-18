@@ -1,12 +1,12 @@
 import React from "react";
 import Head from "next/head";
 
-export default function Layout({ children }) {
+export default function Layout({ children, title = "", description = "" }) {
     return (
         <>
             <Head>
-                <title>Guitar Next</title>
-                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <title>{`GuitarNext ${title}`}</title>
+                <meta name="description" content={description} />
             </Head>
             <h1>Layout</h1>
 
