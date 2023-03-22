@@ -8,7 +8,21 @@
     padding: 5rem 0;
 }
 
+.bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .bar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
 .navigation {
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,8 +31,19 @@
 .navigation a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
+    transition: background-color;
+    transition-duration: 0.5s;
+    margin: 0 1rem;
+    text-transform: uppercase;
+    padding: .5rem;
+    border-radius: 0.5rem;
+}
+
+.navigation a:hover {
+    
+    background-color: var(--primary);
 }
 
 @media screen and (min-width: 768px) {
@@ -27,7 +52,4 @@
         justify-content: space-between;
     }
 
-    .navigation a {
-        margin: 0 1rem;
-    }
 }
