@@ -5,7 +5,7 @@
         url(/img/header.jpg);
     background-position: center;
     background-size: cover;
-    padding: 5rem 0;
+    padding: 1rem 0;
 }
 
 .bar {
@@ -41,7 +41,7 @@
     border-radius: 0.5rem;
 }
 
-.navigation a:hover {
+.navigation a:hover,.active {
     
     background-color: var(--primary);
 }
