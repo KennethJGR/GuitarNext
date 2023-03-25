@@ -7,7 +7,7 @@ export default function Home() {
       <Layout description="This is the home page">
         <h1>Home</h1>
 
-        <Link href="/us">us</Link>
+        
       </Layout>
     </>
   );
