@@ -8,9 +8,7 @@ export default function Footer() {
   console.log(router.pathname);
 
   return (
-    <footer
-    className={styles.footer}
-    >
+    <footer className={styles.footer}>
       <div className={`container ${styles.content}`}>
         <nav className={styles.navigation}>
           <Link
@@ -38,7 +36,7 @@ export default function Footer() {
             Store
           </Link>
         </nav>
-        <p>
+        <p className={styles.copyright}>
           &copy; {new Date().getFullYear()} GuitarRemix. All rights reserved.
         </p>
       </div>

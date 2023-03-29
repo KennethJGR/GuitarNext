@@ -11,28 +11,32 @@
     gap: 1rem;
 }
 
-.navigation a {
+.navigation a ,.copyright{
     color: #fff;
     text-decoration: none;
     font-size: 2rem;
     font-weight: 700;
-    transition: background-color;
     transition-duration: 0.5s;
     margin: 0 1rem;
-    text-transform: uppercase;
     padding: 0.5rem;
     border-radius: 0.5rem;
 }
-.active{
-    color: var(--black);
-}
 
-.navigation a:hover,
-.active {
+.navigation .active{
     background-color: var(--white);
     color: var(--black);
 }
 
+.navigation a:hover{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.copyright{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
 
 
 @media screen and (min-width: 768px) {
