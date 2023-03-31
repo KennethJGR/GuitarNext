@@ -1,12 +1,13 @@
 import Layout from "@/components/layout";
 import Image from "next/image";
+import styles from "@/styles/us.module.css";
 
 const Us = () => {
     return (
         <Layout title="Us" description="This is the us page">
             <main className="container">
                 <h2 className="heading">Us</h2>
-                <div>
+                <div className={styles.content}>
                     <Image
                         src="/img/us.jpg"
                         width={1000}
