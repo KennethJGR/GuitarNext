@@ -13,9 +13,7 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={`container ${styles.bar}`}>
-                <Link
-                href={"/"}
-                >
+                <Link href={"/"}>
                     <Image src={logo} alt="GuitarNext" width={300} height={40} />
                 </Link>
                 <nav className={styles.navigation}>
@@ -32,16 +30,16 @@ export default function Header() {
                         Us
                     </Link>
                     <Link
-                        href="/blog"
-                        className={router.pathname === "/blog" ? styles.active : ""}
-                    >
-                        Blog
-                    </Link>
-                    <Link
                         href="/store"
                         className={router.pathname === "/store" ? styles.active : ""}
                     >
                         Store
+                    </Link>
+                    <Link
+                        href="/blog"
+                        className={router.pathname === "/blog" ? styles.active : ""}
+                    >
+                        Blog
                     </Link>
                 </nav>
             </div>

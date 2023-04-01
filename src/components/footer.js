@@ -24,16 +24,16 @@ export default function Footer() {
             Us
           </Link>
           <Link
-            href="/blog"
-            className={router.pathname === "/blog" ? styles.active : ""}
-          >
-            Blog
-          </Link>
-          <Link
             href="/store"
             className={router.pathname === "/store" ? styles.active : ""}
           >
             Store
+          </Link>
+          <Link
+            href="/blog"
+            className={router.pathname === "/blog" ? styles.active : ""}
+          >
+            Blog
           </Link>
         </nav>
         <p className={styles.copyright}>

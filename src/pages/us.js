@@ -21,7 +21,8 @@ const Us = () => {
                             Blanditiis repellat ipsam consequatur, molestias, qui et suscipit
                             incidunt assumenda architecto aliquam reiciendis repudiandae atque
                             voluptate voluptatem quia, nostrum voluptates libero numquam.
-                            {""}
+                        </p>
+                        <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
                             quae quod, voluptate, quia, voluptas quibusdam voluptatem quidem,
                             quos nemo dolorum quas. Quisquam, quod, voluptas, quibusdam, quae,
