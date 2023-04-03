@@ -6,7 +6,7 @@ const Us = () => {
     return (
         <Layout title="Us" description="This is the us page">
             <main className="container">
-                <h2 className="heading">Us</h2>
+                <h1 className="heading">Us</h1>
                 <div className={styles.content}>
                     <Image
                         src="/img/us.jpg"
