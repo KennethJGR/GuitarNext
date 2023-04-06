@@ -8,7 +8,9 @@ export default function Store({ guitars }) {
             <main className="container">
                 <h1 className="heading">Our Collection</h1>
 
-                <Guitars_list guitars={guitars} />
+                {guitars.map((guitar) => (
+                    <Guitars_list key={guitar.id} guitar={guitar.attributes} />
+                ))}
             </main>
         </Layout>
     );
@@ -29,9 +31,7 @@ export async function getStaticProps() {
 } */
 
 export async function getServerSideProps() {
-    const result = await fetch(
-        `${process.env.API_URL}/guitars?populate=image`
-    );
+    const result = await fetch(`${process.env.API_URL}/guitars?populate=image`);
 
     const { data: guitars } = await result.json();
 
