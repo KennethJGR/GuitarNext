@@ -1,15 +1,17 @@
 :root {
   --primary: #e99401;
   --black: #262626;
-  --white: #FFF;
-  --primary-font: 'Outfit', sans-serif;
+  --white: #fff;
+  --primary-font: "Outfit", sans-serif;
 }
 html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -22,7 +24,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-[class*="container"], 
+[class*="container"],
 main {
   width: min(95%, 120rem);
   margin: 3rem auto;
@@ -33,4 +35,19 @@ main {
   font-weight: 900;
   color: var(--primary);
   margin: 5rem 0;
+}
+
+.error,.errorLink {
+  font-size: 7rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.errorLink {
+  color: var(--primary);
+  font-size: 5rem;
+  font-weight: 700;
+  text-decoration: none;
+
 }

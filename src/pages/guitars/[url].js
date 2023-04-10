@@ -1,16 +1,30 @@
 import React from "react";
+import Image from "next/image";
+import styles from "../../styles/guitars.module.css";
+import Layout from "@/components/layout";
 
-export default function Product({ data }) {
-    console.log(data.data[0].attributes.name);
-
-    const { name, price, description, image } = data.data[0].attributes;
+export default function Product({ guitar }) {
+    const { name, price, description, image } = guitar[0].attributes;
+    console.log(guitar[0].attributes);
 
     return (
-        <div>
-            <h1>
-                {name} - {price} - {description} -
-            </h1>
-        </div>
+        <Layout
+            title={`Guitar ${name}`}
+        >
+            <div className={styles.guitar}>
+                <Image
+                    src={image.data.attributes.url}
+                    alt={`guitar ${name}`}
+                    width={500}
+                    height={500}
+                />
+                <div className={styles.content}>
+                    <h2>{name}</h2>
+                    <p className={styles.description}>{description}</p>
+                    <p className={styles.price}>${price}</p>
+                </div>
+            </div>
+        </Layout>
     );
 }
 
@@ -23,8 +37,6 @@ export async function getStaticPaths() {
         params: { url: guitar.attributes.url },
     }));
 
-    console.log(paths);
-
     return {
         paths,
         fallback: false,
@@ -33,21 +45,21 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { url } }) {
     const result = await fetch(
-        `${process.env.API_URL}/guitars?filters[url]=${url}&populate=image}`
+        `${process.env.API_URL}/guitars?filters[url]=${url}&populate=image`
     );
 
-    const data = await result.json();
+    const { data: guitar } = await result.json();
 
     return {
         props: {
-            data,
+            guitar,
         },
     };
 }
 /* 
 export async function getServerSideProps({ query: { url } }) {
     const result = await fetch(
-        `${process.env.API_URL}/guitars?filters[url]=${url}&populate=image}`
+        `${process.env.API_URL}/guitars?filters[url]=${url}&populate=image`
     );
 
     const data = await result.json();

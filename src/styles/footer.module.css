@@ -2,6 +2,7 @@
     background-color: var(--black);
     color: var(--white);
     padding: 1rem 0;
+  
 }
 
 .navigation {
@@ -11,7 +12,8 @@
     gap: 1rem;
 }
 
-.navigation a ,.copyright{
+.navigation a,
+.copyright {
     color: #fff;
     text-decoration: none;
     font-size: 2rem;
@@ -22,22 +24,21 @@
     border-radius: 0.5rem;
 }
 
-.navigation .active{
+.navigation .active {
     background-color: var(--white);
     color: var(--black);
 }
 
-.navigation a:hover{
+.navigation a:hover {
     background-color: var(--white);
     color: var(--black);
 }
 
-.copyright{
+.copyright {
     text-align: center;
     font-size: 1.5rem;
     margin-top: 1rem;
 }
-
 
 @media screen and (min-width: 768px) {
     .content {
