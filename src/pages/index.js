@@ -1,14 +1,58 @@
-import Link from "next/link";
 import Layout from "@/components/layout";
+import Guitars_list from "@/components/guitars_list";
+import Post from "@/components/post";
+import styles from "@/styles/grid.module.css";
 
-export default function Home() {
+export default function Home({ guitars, posts }) {
+  console.log(guitars);
   return (
     <>
       <Layout description="This is the home page">
-        <h1>Home</h1>
+        <main className="container">
+          <h1 className="heading">Our Collection</h1>
 
+          <div className={styles.grid}>
+            {guitars?.map((guitar) => (
+              <Guitars_list key={guitar.id} guitar={guitar.attributes} />
+            ))}
+          </div>
+        </main>
+
+        <section
+        className="container"
         
+        >
+          <h1 className="heading">Blog</h1>
+
+          <div className={styles.grid}>
+            {posts?.map((post) => (
+              <Post key={post.id} post={post.attributes} />
+            ))}
+          </div>
+        </section>
       </Layout>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const urlGuitars = `${process.env.API_URL}/guitars?populate=image`;
+  const urlPosts = `${process.env.API_URL}/posts?populate=image`;
+
+  const [resGuitars, resPosts] = await Promise.all([
+    fetch(urlGuitars),
+    fetch(urlPosts),
+  ]);
+
+  const [{ data: guitars }, { data: posts }] = await Promise.all([
+    resGuitars.json(),
+    resPosts.json(),
+  ]);
+
+  return {
+    props: {
+      guitars,
+      posts,
+    },
+  };
 }

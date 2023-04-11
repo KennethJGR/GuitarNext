@@ -9,9 +9,7 @@ export default function Store({ guitars }) {
             <main className="container">
                 <h1 className="heading">Our Collection</h1>
 
-                <div
-                className={styles.grid}
-                >
+                <div className={styles.grid}>
                     {guitars?.map((guitar) => (
                         <Guitars_list key={guitar.id} guitar={guitar.attributes} />
                     ))}
