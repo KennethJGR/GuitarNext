@@ -12,7 +12,7 @@ export default function Store({ guitars }) {
                 <div
                 className={styles.grid}
                 >
-                    {guitars.map((guitar) => (
+                    {guitars?.map((guitar) => (
                         <Guitars_list key={guitar.id} guitar={guitar.attributes} />
                     ))}
                 </div>
