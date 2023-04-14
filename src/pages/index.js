@@ -2,7 +2,6 @@ import Layout from "@/components/layout";
 import Guitars_list from "@/components/guitars_list";
 import Post from "@/components/post";
 import styles from "@/styles/grid.module.css";
-import Course from "@/components/course";
 
 export default function Home({ guitars, posts, course }) {
   return (
@@ -17,7 +16,6 @@ export default function Home({ guitars, posts, course }) {
             ))}
           </div>
         </main>
-        <Course course={course.attributes} />
 
         <section className="container">
           <h1 className="heading">Blog</h1>
