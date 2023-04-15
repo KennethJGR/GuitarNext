@@ -9,3 +9,9 @@
         grid-gap: 2rem;
     }
 }
+
+.summary {
+    background-color: #f9fafb;
+    padding: 3rem;
+    border-radius: 1rem;
+}
